@@ -28,7 +28,7 @@ DevOps Work requires continuous integration.
 - Make proper use of `git` branching workflow to complete the objectives below
 - Upon completion of all objectives create a merge request for review
 
-### Objective #2 : Review and Publish the App
+### Objective #1 : Review and Publish the App
 
 DevOps requires Application team mentorship. This app displays ssh keys for system admins.
 
@@ -37,13 +37,13 @@ DevOps requires Application team mentorship. This app displays ssh keys for syst
 - Write code to complete the Docker `build`, `test`, and `publish` the image to an Artifact repository
   - This can be in any format, but should be an executable
 
-### Objective #3 : Deploy the app using Kubernetes
+### Objective #2 : Deploy the app using Kubernetes
 
 - Create an app manifest within [deployment.yml](./deployment.yml)
 - Using kubernetes deploy the app to
   - Local environments
   - **Bonus for AWS Deployment, even if conceptual**
 
-### Objective #4 : Monitor the app
+### Objective #3 : Monitor the app
 
 - Suggest best practices for monitoring
