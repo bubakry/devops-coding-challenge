@@ -19,14 +19,14 @@ _Developers have created an app that works in their local environment. It needs 
 
 _Using best practices and taking thorough notes please complete the objectives below._
 
-### Objective #1 : Create a workspace
+### Objective #0 : Prepwork - Create a workspace
 
 DevOps Work requires continuous integration.
 
-- `Fork` this repo into your own Github account
-- Add user `stefancrain` to your forked repo with read access
-- Make proper use of `git` branching to complete the objectives below
-- Upon completion of all objectives `push` the branch to remote
+- Create a *private* `Fork` of this repo into your own Github account 
+- Add user `stefancrain` and `vbheemineni` to your forked repo
+- Make proper use of `git` branching workflow to complete the objectives below
+- Upon completion of all objectives create a merge request for review
 
 ### Objective #2 : Review and Publish the App
 
