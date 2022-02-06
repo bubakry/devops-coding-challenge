@@ -2,7 +2,6 @@ FROM python:latest
 
 ENV CONTAINER_LOCALE="en_US.UTF-8"
 ENV CONTAINER_TZ="America/New_York"
-ENV PASSWORD="':te{]GY.[e|G%L|e<*t-<*qwlP90`/G"
 EXPOSE 80
 
 COPY package.tar.gz /bin/
@@ -17,5 +16,5 @@ RUN update-ca-certificates
 RUN apt-get -qq remove  ca-certificates locales tzdata
 RUN apt-get -qq clean autoclean
 RUN apt-get -qq -y --purge autoremove
-USER root
+
 ENTRYPOINT [ "python", "/app/app.py" ]
