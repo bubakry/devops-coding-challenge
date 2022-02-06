@@ -37,7 +37,7 @@ jobs:
         env:                                                                                                          
           ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}                                                       
           RELEASE_IMAGE: ${{ steps.login-ecr.outputs.registry }}/${{ env.ECR_REPOSITORY }}:${{ env.RELEASE_REVISION }}
-        run: docker build -t tutorial/1-flask-deployment . --tag ${{ env.RELEASE_IMAGE }} --target main --push . 
+        run: docker build -t app . --tag ${{ env.RELEASE_IMAGE }} --target main --push . 
       - name: Deploy to Kubernetes cluster                                                                            
         uses: kodermax/kubectl-aws-eks@master                                                                         
         env:                                                                                                          
