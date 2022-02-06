@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: my-cool-application-deployment
+  namespace: production
   labels:
     app: my-cool-application
 spec:
@@ -19,4 +20,3 @@ spec:
         image: 257906693240.dkr.ecr.us-east-1.amazonaws.com/my-cool-application:latest
         ports:
         - containerPort: 80
-
