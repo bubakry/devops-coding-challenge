@@ -36,10 +36,10 @@ jobs:
       - name: Build & Push Image                                                                                      
         env:                                                                                                          
           ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}                                                       
-          RELEASE_IMAGE: ${{ steps.login-ecr.outputs.registry }}/${{ env.ECR_REPOSITORY }}:${{ env.RELEASE_REVISION }}
+          RELEASE_IMAGE: ${{ steps.login-ecr.outputs.registry }}/${{ env.ECR_REPOSITORY }}:latest
         run: |
           docker buildx create --use
-          docker buildx build -t ${{ env.ECR_REGISTRY }}/${{ env.ECR_REPOSITORY }}:latest . --cache-from=type=local,src=/tmp/.buildx-cache --cache-to=type=local,dest=/tmp/.buildx-cache-new -t ${{ env.ECR_REGISTRY }}/${{ env.ECR_REPOSITORY }}:latest
+          docker buildx build -t ${{ env.ECR_REGISTRY }}/${{ env.ECR_REPOSITORY }}:latest . --cache-from=type=local,src=/tmp/.buildx-cache --cache-to=type=local,dest=/tmp/.buildx-cache-new 
           docker push ${{ env.ECR_REGISTRY }}/${{ env.ECR_REPOSITORY }}:latest
       - name: Deploy to Kubernetes cluster                                                                            
         uses: kodermax/kubectl-aws-eks@master                                                                         
