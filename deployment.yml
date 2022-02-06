@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nginx-deployment
+  name: my-cool-application-deployment
   labels:
-    app: nginx
+    app: my-cool-application
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: nginx
+      app: my-cool-application
   template:
     metadata:
       labels:
-        app: nginx
+        app: my-cool-application
     spec:
       containers:
-      - name: nginx
-        image: nginx:1.14.2
+      - name: my-cool-application
+        image: 257906693240.dkr.ecr.us-east-1.amazonaws.com/my-cool-application:latest
         ports:
         - containerPort: 80
 
